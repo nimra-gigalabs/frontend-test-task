@@ -1,0 +1,57 @@
+.compaign_item {
+  margin: 1rem 0;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  display: flex; 
+}
+
+.compaign_item__content {
+  padding: 0;
+}
+
+.compaign_item__info {
+  padding: 1rem;
+  text-align: center;
+}
+
+
+.compaign_item__info h2,
+.compaign_item__info h3,
+.compaign_item__info p {
+  margin: 0 0 0.5rem 0;
+}
+
+.compaign_item__actions {
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.compaign_item__modal-content {
+  padding: 0;
+}
+
+.compaign_item__modal-actions {
+  text-align: right;
+}
+
+.compaign_item__actions button,
+.compaign_item__actions a {
+  margin: 0.5rem;
+}
+
+.fadeOut{
+  opacity:0;
+  width:0;
+  height:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+
+}
+.fadeIn{
+  opacity:1;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
