@@ -42,22 +42,24 @@ const DonationForm = ({ showDonate, setShowDonate, compaign, setError }) => {
   const submitHandler = async(values) => {
     try {
       await postDonation(values, compaign.compaign_id);
+      setShowDonate(false)
+      window.location.reload();
     } catch(error) {
-      setErrorMessage(error.message);
+      console.error(error)
+      setErrorMessage(error.response.data);
+      setShowDonate(false)
     }
-
-    setShowDonate(false)
-    window.location.reload();
   }
 
   useEffect(() => {
     async function fetchData() {
       try {
         let response = await fetchCurrencies();
+
         setCurrencies(response[0]);
         setSelectedCurrency(response[0].find((elem) => elem.symbol=='USD'));
       } catch(error) {
-        setErrorMessage(error.message);
+        setErrorMessage(error.response.data);
       }
     }
 
@@ -81,9 +83,14 @@ const DonationForm = ({ showDonate, setShowDonate, compaign, setError }) => {
     setFieldValue("currencyId", donation.id);
   }
 
+  const clearError = () => {
+    setErrorMessage(null);
+    window.location.reload();
+  }
+
   return (
   <>
-    <ErrorModal error={errorMessage} onClear={() => setErrorMessage(null)} />
+    <ErrorModal error={errorMessage} onClear={clearError} />
     {showDonate && 
     <Modal
       show={showDonate}

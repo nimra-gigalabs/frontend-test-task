@@ -15,7 +15,7 @@ const Compaign = props => {
         let response = await fetchCompaigns();
         setCompaigns(response[0]);
       } catch(error) {
-        setErrorMessage(error.message);
+        setErrorMessage(error.response.data);
       }
     }
 
