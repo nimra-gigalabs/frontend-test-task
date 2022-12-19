@@ -1,0 +1,75 @@
+.Dropdown__inputWrapper {
+  border-bottom: 1px solid #6b7c93;
+  display: flex;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.Dropdown__toggleMenuButton {
+  background: none;
+  border: none;
+}
+
+.Dropdown__menu {
+  margin-top: 4px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  transform: scaleY(1);
+  transform-origin: left top 0px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.Dropdown__menuItem {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-family: "Lato";
+  text-align: left;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  transition: all 1ms ease;
+  height: 50px;
+  flex-basis: 50px;
+}
+
+.Dropdown__menuItem:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.Dropdown__inputField {
+  font-family: "Lato";
+  padding-left: 4px;
+  font-size: 16px;
+  color: #6b7c93;
+}
+
+.Dropdown__inputField--placeholder {
+  color: rgba(107, 124, 147, 0.4);
+}
+.ChevronDown__container {
+  transition: all 200ms ease;
+  transform-origin: center 10px;
+}
+
+.ChevronDown__container--up {
+  transform: rotateX(180deg);
+}
+
+.ChevronDown {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  content: "";
+  border-left: 2px solid #6b7c93;
+  border-bottom: 2px solid #6b7c93;
+  transform: rotateZ(-45deg);
+  transition: all 500ms ease;
+}
+
+.dropdown_style {
+  width: 100px;
+  margin: "auto";
+  display: "flex";
+  flex-direction: "column";
+}
