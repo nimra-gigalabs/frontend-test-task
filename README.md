@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Installs all relevant packages
 
 ### `Add .env file`
-- Set REACT_APP_REACT_APP_BASE_URL='http://localhost:5000'
+- Set REACT_APP_BASE_URL='http://localhost:5000'
 
 ### `npm start`
 This will start the server at http://localhost:3000
